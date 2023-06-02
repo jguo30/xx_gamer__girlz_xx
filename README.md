@@ -1,3 +1,6 @@
+# PROJECT by xx_gamer__girlz_xx
+## David Chen, Jacob Guo, Donald Bi, Yatlong Chan
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
