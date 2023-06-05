@@ -65,7 +65,7 @@ export default function Hero() {
                         </div>
                     </form>
 
-                    <p className="mt-10 text-sm text-gray-500 text-left">
+                    <p className="mt-2 text-sm text-gray-500 text-left">
                         Need an account?{' '}
                         <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
                             Register
