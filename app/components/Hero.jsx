@@ -1,10 +1,14 @@
-import '../styles/Hero.module.css'
+import styles from '../styles/Hero.module.css'
+function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+}
+
 export default function Hero() {
     return (
         <div className="relative bg-[#404eed] isolate px-6 lg:px-6">
             <div className="mx-auto max-w-2xl py-10 sm:py-36 lg:py-46">
                 <div className="text-center">
-                    <h1 className="text-4xl font-bold tracking-tight text-white headline sm:text-6xl">
+                    <h1 className={classNames("text-4xl font-bold tracking-tight text-white headline sm:text-6xl", styles.headline)}>
                         IMAGINE A PLACE...
                     </h1>
                     <p className="mt-6 text-lg leading-8 text-gray-100">
@@ -36,7 +40,7 @@ export default function Hero() {
                 />
             </div>
             <img src={'/hero-bg.svg'} className="absolute inset-x-0 bottom-0 w-full h-auto" alt="" />
-            <img src={'/bg-left.svg'} style={{ position: 'absolute', bottom: '0' }} alt="" />
+            <img src={'/bg-left.svg'} className={styles.heroLeft} style={{ position: 'absolute', bottom: '0' }} alt="" />
             <img src={'/bg-right.svg'} style={{ position: 'absolute', bottom: '0', right: '0' }} alt="" />
         </div>
     )

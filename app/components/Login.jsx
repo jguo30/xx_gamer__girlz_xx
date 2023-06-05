@@ -13,7 +13,7 @@ export default function Hero() {
                     </p>
                 </div>
 
-                <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm bg-gray-800 p-10 mt-0">
+                <div className="sm:mx-auto sm:w-full sm:max-w-sm bg-gray-800 p-10 mt-0">
                     <form className="space-y-6" action="#" method="POST">
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium leading-6 uppercase text-gray-100">
