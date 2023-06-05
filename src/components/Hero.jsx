@@ -1,9 +1,11 @@
 import '../styles/Hero.module.css'
+import bg from '../assets/hero-bg.svg'
+import bgLeft from '../assets/bg-left.svg'
 
 export default function Hero() {
     return (
-        <div className="relative bg-[#404eed] isolate px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl py-16 sm:py-48 lg:py-56">
+        <div className="relative bg-[#404eed] isolate px-6 lg:px-6">
+            <div className="mx-auto max-w-2xl py-10 sm:py-36 lg:py-46">
                 <div className="text-center">
                     <h1 className="text-4xl font-bold tracking-tight text-white headline sm:text-6xl">
                         IMAGINE A PLACE...
@@ -36,6 +38,8 @@ export default function Hero() {
                     }}
                 />
             </div>
+            <img src={bg} className="absolute inset-x-0 bottom-0 w-full h-auto" alt="" />
+            <img src={bgLeft} style={{ position: 'absolute', bottom: '0' }} alt="" />
         </div>
     )
 }
