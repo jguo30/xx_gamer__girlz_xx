@@ -1,3 +1,5 @@
+'use client'
+
 const navigation = {
     solutions: [
         { name: 'Download', href: '#' },
@@ -79,7 +81,7 @@ const navigation = {
 
 export default function Footer() {
     return (
-        <footer className="bg-gray-900" aria-labelledby="footer-heading">
+        <div className="bg-gray-900" aria-labelledby="footer-heading">
             <h2 id="footer-heading" className="sr-only">
                 Footer
             </h2>
@@ -184,6 +186,6 @@ export default function Footer() {
                     </p>
                 </div>
             </div>
-        </footer>
+        </div>
     )
 }
