@@ -182,7 +182,9 @@ export default function Footer() {
                         </a>
                     </div>
                     <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-                        <img className="hidden lg:block h-8 w-auto" src={'/discord-logo-white.svg'} alt="Your Company" />
+                        <a href="/">
+                            <img className="hidden lg:block h-8 w-auto" src={'/discord-logo-white.svg'} alt="Your Company" />
+                        </a>
                     </p>
                 </div>
             </div>
