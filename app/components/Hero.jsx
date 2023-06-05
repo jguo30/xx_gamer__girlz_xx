@@ -5,23 +5,23 @@ function classNames(...classes) {
 
 export default function Hero() {
     return (
-        <div className="relative bg-[#404eed] isolate px-6 lg:px-6">
+        <div className="relative bg-[#404eed] isolate px-6 lg:px-6 overflow-hidden">
             <div className="mx-auto max-w-2xl py-10 sm:py-36 lg:py-46">
                 <div className="text-center">
                     <h1 className={classNames("text-4xl font-bold tracking-tight text-white headline sm:text-6xl", styles.headline)}>
                         IMAGINE A PLACE...
                     </h1>
-                    <p className="mt-6 text-lg leading-8 text-gray-100">
+                    <p className="mt-6 text-lg leading-8 text-gray-100 z-50">
                         ...where you can belong to a school club, a gaming group, or a worldwide art community. Where just you and a handful of friends can spend time together. A place that makes it easy to talk every day and hang out more often.
                     </p>
                     <div className="mt-10 flex items-center justify-center gap-x-6">
                         <a
                             href="#"
-                            className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black"
+                            className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black z-50"
                         >
                             Get started
                         </a>
-                        <a href="#" className="rounded-md px-3.5 py-2.5 text-sm bg-gray-900 font-semibold leading-6 text-white">
+                        <a href="#" className="rounded-md px-3.5 py-2.5 text-sm bg-gray-900 font-semibold leading-6 text-white z-50">
                             Open Discord in Your Browser <span aria-hidden="true">→</span>
                         </a>
                     </div>
@@ -39,9 +39,9 @@ export default function Hero() {
                     }}
                 />
             </div>
-            <img src={'/hero-bg.svg'} className="absolute inset-x-0 bottom-0 w-full h-auto" alt="" />
+            <img src={'/hero-bg.svg'} className="absolute inset-x-0 bottom-0 w-full h-auto -z-50" alt="" />
             <img src={'/bg-left.svg'} className={styles.heroLeft} style={{ position: 'absolute', bottom: '0' }} alt="" />
-            <img src={'/bg-right.svg'} style={{ position: 'absolute', bottom: '0', right: '0' }} alt="" />
+            <img src={'/bg-right.svg'} className="-z-25" style={{ position: 'absolute', bottom: '0', right: '-220px' }} alt="" />
         </div>
     )
 }
