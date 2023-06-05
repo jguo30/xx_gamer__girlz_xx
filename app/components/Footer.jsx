@@ -116,7 +116,7 @@ export default function Footer() {
                         </div>
                         <div className="md:grid md:grid-cols-2 md:gap-8">
                             <div>
-                                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Key Club</h3>
+                                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Resources</h3>
                                 <ul className="mt-4 space-y-4">
                                     {navigation.company.map((item) => (
                                         <li key={item.name}>
