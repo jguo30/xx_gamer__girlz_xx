@@ -67,7 +67,7 @@ export default function Hero() {
 
                     <p className="mt-2 text-sm text-gray-500 text-left">
                         Need an account?{' '}
-                        <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+                        <a href="/register" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
                             Register
                         </a>
                     </p>
