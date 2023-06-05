@@ -59,12 +59,12 @@ export default function Navbar() {
                                 </div>
                             </div>
                             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                                <button
-                                    type="button"
-                                    className="rounded-full p-2 bg-white p-1 font-small text-black"
+                                <a
+                                    href="/login"
+                                    className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black"
                                 >
                                     Login
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
