@@ -1,8 +1,0 @@
-.headline {
-  font-family: "ABC Ginto Nord", "Noto Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-  font-weight: 800;
-  font-size: clamp(42px, 2vw, 34px);
-  line-height: 60%;
-  font-size: 56px;
-}
