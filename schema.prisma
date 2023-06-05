@@ -8,12 +8,16 @@ generator client {
 }
 
 model User {
-    id        Int      @id @default(autoincrement())
-    createdAt DateTime @default(now())
-    email     String   @unique
-    name      String?
-    profile   Profile?
-    friends  User[]   @relation("Friends", references: [id])
+    id           Int       @id @default(autoincrement())
+    createdAt    DateTime  @default(now())
+    email        String    @unique
+    name         String?
+    profile      Profile?
+    serversOwned Server[]  @relation("ServerOwners")
+    membersOf    Server[]  @relation("ServerMembers")
+    // friends  User[]    @relation("Friends", references: [id])
+    serverId     Int?
+    Message      Message[]
 }
 
 model Profile {
@@ -24,3 +28,31 @@ model Profile {
     userId    Int      @unique
 }
 
+model Server {
+    id        Int       @id @default(autoincrement())
+    createdAt DateTime  @default(now())
+    name      String
+    owner     User      @relation(fields: [ownerId], references: [id], name: "ServerOwners")
+    ownerId   Int       @unique
+    members   User[]    @relation("ServerMembers")
+    channels  Channel[]
+}
+
+model Channel {
+    id        Int       @id @default(autoincrement())
+    createdAt DateTime  @default(now())
+    name      String
+    server    Server    @relation(fields: [serverId], references: [id])
+    serverId  Int
+    messages  Message[]
+}
+
+model Message {
+    id        Int      @id @default(autoincrement())
+    createdAt DateTime @default(now())
+    content   String
+    author    User     @relation(fields: [authorId], references: [id])
+    authorId  Int
+    channel   Channel  @relation(fields: [channelId], references: [id])
+    channelId Int
+}
