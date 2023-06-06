@@ -11,12 +11,12 @@ model User {
     id           Int       @id @default(autoincrement())
     createdAt    DateTime  @default(now())
     email        String    @unique
-    userName     String?
+    userName     String?   @unique
     profile      Profile?
     serversOwned Server[]  @relation("ServerOwners")
     membersOf    Server[]  @relation("ServerMembers")
     // friends  User[]    @relation("Friends", references: [id])
-    serverId     Int?
+    // serverId     Int?
     Messages     Message[]
 }
 
@@ -26,6 +26,7 @@ model Profile {
     bio       String?
     user      User     @relation(fields: [userId], references: [id])
     userId    Int      @unique
+    url       String? 
 }
 
 model Server {
