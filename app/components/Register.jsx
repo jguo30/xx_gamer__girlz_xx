@@ -15,7 +15,7 @@ export default function Hero() {
                     <form className="space-y-6" action="#" method="POST">
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium leading-6 uppercase text-gray-100">
-                                Email or phone number <span className="text-red-500">*</span>
+                                Email<span className="text-red-500">*</span>
                             </label>
                             <div className="mt-2">
                                 <input
@@ -78,6 +78,8 @@ export default function Hero() {
                             </button>
                         </div>
                     </form>
+                    
+                    <span id="message" className='mt-5'></span>
 
                     <p className="mt-2 text-sm text-gray-500 text-left">
                         Already have an account?{' '}
