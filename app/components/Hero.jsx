@@ -17,11 +17,12 @@ export default function Hero() {
                     <div className="mt-10 flex items-center justify-center gap-x-6">
                         <a
                             href="#"
-                            className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black z-50"
+                            className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black z-50 hover:text-indigo-500 duration-200"
                         >
                             Get started
                         </a>
-                        <a href="#" className="rounded-md px-3.5 py-2.5 text-sm bg-gray-900 font-semibold leading-6 text-white z-50">
+                        <a href="#" 
+                        className="rounded-md px-3.5 py-2.5 text-sm bg-gray-900 font-semibold leading-6 text-white z-50 hover:shadow-md dark:hover:shadow-black/30 hover:bg-slate-800 duration-200">
                             Open Discord in Your Browser <span aria-hidden="true">→</span>
                         </a>
                     </div>

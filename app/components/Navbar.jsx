@@ -61,7 +61,7 @@ export default function Navbar() {
                             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                                 <a
                                     href="/login"
-                                    className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black"
+                                    className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black hover:text-indigo-500 duration-200"
                                 >
                                     Login
                                 </a>
