@@ -1,5 +1,5 @@
 import '../styles/Hero.module.css'
-export default function Hero() {
+export default function Login() {
     return (
         <div className="flex relative h-screen bg-[#404eed] isolate px-6 lg:px-6">
 
@@ -14,7 +14,7 @@ export default function Hero() {
                 </div>
 
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm bg-gray-800 p-10 mt-0">
-                    <form className="space-y-6" action="#" method="POST">
+                    <form className="space-y-6" method="POST" onSubmit={}>
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium leading-6 uppercase text-gray-100">
                                 Email or phone number <span className="text-red-500">*</span>
