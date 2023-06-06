@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { prisma } from './db'
+import { prisma } from '@/prisma.ts';
 
 export function GET() {
     return NextResponse.json({ success  : true });
