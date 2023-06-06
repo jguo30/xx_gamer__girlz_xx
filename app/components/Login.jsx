@@ -1,5 +1,35 @@
+'use client';
+
 import '../styles/Hero.module.css'
 export default function Login() {
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        // console.log('submit')
+        
+        const res = await fetch('/api/v9/login', {
+            body: JSON.stringify({
+                email: e.target.email.value,
+                password: e.target.password.value
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            method: 'POST'
+        })
+
+        const result = await res.json()
+
+        if (result.status === 'ok') {
+        }
+        else {  
+            document.getElementById('message').innerHTML = result.message
+            document.getElementById('message').classList.add('text-red-500')
+        }
+        
+    }
+    
+
     return (
         <div className="flex relative h-screen bg-[#404eed] isolate px-6 lg:px-6">
 
@@ -14,7 +44,7 @@ export default function Login() {
                 </div>
 
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm bg-gray-800 p-10 mt-0">
-                    <form className="space-y-6" method="POST" onSubmit={}>
+                    <form className="space-y-6" method="POST" onSubmit={handleSubmit}>
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium leading-6 uppercase text-gray-100">
                                 Email or phone number <span className="text-red-500">*</span>
@@ -64,6 +94,8 @@ export default function Login() {
                             </button>
                         </div>
                     </form>
+
+                    <span id="message" className='mt-5'></span>
 
                     <p className="mt-2 text-sm text-gray-500 text-left">
                         Need an account?{' '}

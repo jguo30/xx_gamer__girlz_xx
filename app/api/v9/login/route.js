@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { prisma } from './db'
+import { prisma } from '@/prisma.ts';
 
 export function GET() {
     return NextResponse.json({ success  : true });
@@ -13,9 +13,10 @@ export async function POST(request) {
             password,
         },
     });
+    console.log(user);
     if (user) {
         return NextResponse.redirect('/dashboard');
     } else {
-        return NextResponse.redirect('/login');
+        return NextResponse.json({ message: 'Invalid username or password', success: false });
     }
 }
