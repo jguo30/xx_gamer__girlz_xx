@@ -1,3 +1,5 @@
+'use client';
+
 import '../styles/Hero.module.css'
 export default function Hero() {
 
@@ -15,7 +17,7 @@ export default function Hero() {
                 'Content-Type': 'application/json'
             },
             method: 'POST'
-        })
+        });
 
         const result = await res.json()
 
@@ -41,7 +43,7 @@ export default function Hero() {
                 </div>
 
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm bg-gray-800 p-10 mt-0">
-                    <form className="space-y-6" onSubmit={handleSubmit}>
+                    <form className="space-y-6" method="POST" onSubmit={handleSubmit}>
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium leading-6 uppercase text-gray-100">
                                 Email<span className="text-red-500">*</span>
