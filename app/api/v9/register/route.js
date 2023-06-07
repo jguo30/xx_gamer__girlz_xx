@@ -7,15 +7,15 @@ export function GET() {
 
 export async function POST(request) {
     const { email, username, password } = request.body;
-
+    console.log(email, username, password);
     const existingUser = await prisma.user.findFirst({
         where: {
             OR: [
                 {
-                    email: email,
+                    email,
                 },
                 {
-                    username: username,
+                    username,
                 },
             ],
         }
@@ -35,9 +35,10 @@ export async function POST(request) {
 
         console.log(user)
 
-        // handle sessions 
+        // handle sessions by adding username to session
+        request.session.set('username', username);
 
-        // return NextResponse.redirect('/login');
+        return NextResponse.redirect('/login');
     }
 
 

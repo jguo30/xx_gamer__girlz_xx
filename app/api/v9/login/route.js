@@ -7,6 +7,7 @@ export function GET() {
 
 export async function POST(request) {
     const { username, password } = request.body;
+    console.log(username, password);
     const user = await prisma.user.findFirst({
         where: {
             username,
