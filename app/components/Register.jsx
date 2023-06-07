@@ -6,6 +6,7 @@ export default function Register() {
     const handleSubmit = async (e) => {
         e.preventDefault()
         // console.log('submit')
+        console.log(e.target.email.value)
         
         const res = await fetch('/api/v9/register', {
             body: JSON.stringify({
