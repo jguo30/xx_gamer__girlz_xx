@@ -1,5 +1,34 @@
 import '../styles/Hero.module.css'
 export default function Hero() {
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        // console.log('submit')
+        
+        const res = await fetch('/api/v9/register', {
+            body: JSON.stringify({
+                email: e.target.email.value,
+                username: e.target.username.value,
+                password: e.target.password.value
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            method: 'POST'
+        })
+
+        const result = await res.json()
+
+        if (result.status === 'ok') {
+        }
+        else {  
+            document.getElementById('message').innerHTML = result.message
+            document.getElementById('message').classList.add('text-red-500')
+        }
+        
+    }
+    
+
     return (
         <div className="flex relative h-screen bg-[#404eed] isolate px-6 lg:px-6 overflow-hidden">
 
@@ -12,7 +41,7 @@ export default function Hero() {
                 </div>
 
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm bg-gray-800 p-10 mt-0">
-                    <form className="space-y-6" action="#" method="POST">
+                    <form className="space-y-6" onSubmit={handleSubmit}>
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium leading-6 uppercase text-gray-100">
                                 Email<span className="text-red-500">*</span>
