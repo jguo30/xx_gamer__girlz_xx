@@ -8,6 +8,11 @@ export function GET() {
 export async function POST(request) {
     const { email, username, password } = request.body;
     console.log(email, username, password);
+
+    if (!email || !username || !password) {
+        return NextResponse.json({ message: 'Please fill in all fields', success: false });
+    }
+
     const existingUser = await prisma.user.findFirst({
         where: {
             OR: [
