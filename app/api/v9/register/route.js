@@ -32,6 +32,12 @@ export async function POST(request) {
                 password: password,
             },
         });
+
+        console.log(user)
+
+        // handle sessions 
+
+        // return NextResponse.redirect('/login');
     }
 
 
