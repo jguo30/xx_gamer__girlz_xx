@@ -1,7 +1,7 @@
 'use client';
 
 import '../styles/Hero.module.css'
-export default function Hero() {
+export default function Register() {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
