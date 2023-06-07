@@ -16,7 +16,11 @@ export async function POST(request) {
     });
     console.log(user);
     if (user) {
-        return NextResponse.redirect('/dashboard');
+        // handle sessions by adding username to session
+        // request.session.set('username', username);
+        // @TODO use iron session to handle sessions
+
+        return NextResponse.redirect('/channel/@me');
     } else {
         return NextResponse.json({ message: 'Invalid username or password', success: false });
     }

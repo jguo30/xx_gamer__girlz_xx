@@ -38,7 +38,7 @@ export async function POST(request) {
         // handle sessions by adding username to session
         request.session.set('username', username);
 
-        return NextResponse.redirect('/login');
+        return NextResponse.redirect('/channel/@me');
     }
 
 
