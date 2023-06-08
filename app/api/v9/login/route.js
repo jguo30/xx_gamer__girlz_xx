@@ -6,11 +6,12 @@ export function GET() {
 }
 
 export async function POST(request) {
-    const { username, password } = request.body;
-    console.log(username, password);
+    const body = await request.json();
+    const { email, password } = body;
+    console.log(email, password);
     const user = await prisma.user.findFirst({
         where: {
-            username,
+            email,
             password,
         },
     });

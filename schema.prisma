@@ -12,6 +12,7 @@ model User {
     createdAt    DateTime  @default(now())
     email        String    @unique
     userName     String?   @unique
+    password     String
     profile      Profile?
     serversOwned Server[]  @relation("ServerOwners")
     membersOf    Server[]  @relation("ServerMembers")

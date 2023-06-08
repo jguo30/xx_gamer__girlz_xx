@@ -5,12 +5,11 @@ export default function Register() {
     const handleSubmit = async (e) => {
         e.preventDefault()
         // console.log('submit')
-        console.log(e.target.email.value)
         
         const res = await fetch('/api/v9/register', {
             body: JSON.stringify({
                 email: e.target.email.value,
-                username: e.target.username.value,
+                userName: e.target.username.value,
                 password: e.target.password.value
             }),
             headers: {
@@ -18,14 +17,17 @@ export default function Register() {
             },
             method: 'POST'
         });
-
-        const result = await res.json()
-
-        if (result.status === 'ok') {
-        }
-        else {  
-            document.getElementById('message').innerHTML = result.message
-            document.getElementById('message').classList.add('text-red-500')
+        
+        if (res.ok) {
+            const result = await res.json();
+            if (result.status === 'ok') {
+                // Handle successful registration
+            } else {
+                document.getElementById('message').innerHTML = result.message;
+                document.getElementById('message').classList.add('text-red-500');
+            }
+        } else {
+            console.error('Registration failed:', res.status);
         }
         
     }

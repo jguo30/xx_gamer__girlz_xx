@@ -17,16 +17,18 @@ export default function Login() {
             },
             method: 'POST'
         })
-
-        const result = await res.json()
-
-        if (result.status === 'ok') {
-        }
-        else {  
-            document.getElementById('message').innerHTML = result.message
-            document.getElementById('message').classList.add('text-red-500')
-        }
         
+        if (res.ok) {
+            const result = await res.json();
+            if (result.status === 'ok') {
+                // Handle successful registration
+            } else {
+                document.getElementById('message').innerHTML = result.message;
+                document.getElementById('message').classList.add('text-red-500');
+            }
+        } else {
+            console.error('Registration failed:', res.status);
+        }
     }
     
 

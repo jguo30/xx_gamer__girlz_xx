@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+
 import { prisma } from '@/prisma.ts';
 
 export function GET() {
@@ -6,10 +7,11 @@ export function GET() {
 }
 
 export async function POST(request) {
-    const { email, username, password } = request.body;
-    console.log(email, username, password);
+    const body = await request.json();
+    console.log(body);
+    const { email, userName, password } = body;
 
-    if (!email || !username || !password) {
+    if (!email || !userName || !password) {
         return NextResponse.json({ message: 'Please fill in all fields', success: false });
     }
 
@@ -20,7 +22,7 @@ export async function POST(request) {
                     email,
                 },
                 {
-                    username,
+                    userName,
                 },
             ],
         }
@@ -33,7 +35,7 @@ export async function POST(request) {
         const user = await prisma.user.create({
             data: {
                 email: email,
-                username: username,
+                userName: userName,
                 password: password,
             },
         });
@@ -41,12 +43,9 @@ export async function POST(request) {
         console.log(user)
 
         // handle sessions by adding username to session
-        request.session.set('username', username);
+
 
         return NextResponse.redirect('/channel/@me');
     }
 
-
-    
-    
 }
