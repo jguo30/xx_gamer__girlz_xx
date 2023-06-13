@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 const crypto = require("crypto");
 import { prisma } from "@/prisma.ts";
-import { cookies } from "next/headers";
+// import { setCookie } from "cookies-next";
 
 export function GET() {
   return NextResponse.json({ success: true });
@@ -57,19 +57,25 @@ export async function POST(request) {
 
     console.log(user);
 
-    // add usertoken to cookie
-    cookies.set("authToken", userToken, {
-      path: "/",
-      maxAge: 60 * 60 * 24 * 7,
-      sameSite: "lax",
-      secure: true,
-    });
+    // setCookie("authToken", userToken, {
+    //   httpOnly: true,
+    //   secure: process.env.NODE_ENV === "production",
+    //   path: "/",
+    //   maxAge: 60 * 60 * 24 * 28,
+    // });
 
     // return NextResponse.redirect("/channel/" + userName);
-    return NextResponse.json({
+    const response = NextResponse.json({
       message: "User created",
       success: true,
       redirect: "/channel/@me",
     });
+
+    response.headers.set(
+      "Set-Cookie",
+      `authToken=${userToken}; Path=/; HttpOnly; Secure; Max-Age=2592000; SameSite=Strict`
+    );
+
+    return response;
   }
 }
