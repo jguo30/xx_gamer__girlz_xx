@@ -1,0 +1,78 @@
+xx_gamer_girlz__xx
+Jacob Guo
+Donald Bi
+Yat Long Chan
+David Chen
+PD8
+
+ ______   ______   __   __   __       ______   _______
+/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\
+\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__
+ \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\
+  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/
+   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \
+    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/
+
+Discord Clone!
+
+--------------------------------------------------------------
+
+davidc -- 2023-06-02 02:15
+
+initiate basic react app
+adding tailwind css and js
+--------------------------------------------------------------
+
+jacobg -- 2023-06-04 20:00
+
+updated devlog according to feedback round:
+we needed to add more specificity to our goals and website uses,
+and we changed our roles and tasks more.
+
+--------------------------------------------------------------
+
+davidc -- 2023-06-04 22:00
+
+added basic hero svg
+hero adjustment and styling changes for hero
+
+--------------------------------------------------------------
+
+davidc -- 2023-06-05 01:15
+
+adding basic pages and files
+prisma features added for future use
+login page and home page
+
+--------------------------------------------------------------
+
+donaldb -- 2023-06-05 22:15
+
+doing css
+
+--------------------------------------------------------------
+
+yatc, donaldb -- 2023-06-06 22:00
+
+self studying react
+adding to backend and websocket
+--------------------------------------------------------------
+
+donaldb -- 2023-06-07 22:15
+
+adding to registering users
+
+--------------------------------------------------------------
+
+davidc -- 2023-06-07 22:15
+
+adding basic prelims for slug routing
+helping with the register form
+
+--------------------------------------------------------------
+
+jacobg -- 2023-06-12 23:00
+
+doing my graphic design editing for the website
+
+--------------------------------------------------------------
