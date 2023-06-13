@@ -20,7 +20,8 @@ export default function Register() {
         
         if (res.ok) {
             const result = await res.json();
-            if (result.status === 'ok') {
+            if (result.success === true) {
+                window.location.assign(result.redirect);
                 // Handle successful registration
             } else {
                 document.getElementById('message').innerHTML = result.message;

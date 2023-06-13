@@ -20,8 +20,10 @@ export default function Login() {
         
         if (res.ok) {
             const result = await res.json();
-            if (result.status === 'ok') {
+            console.log(result)
+            if (result.success === true) {
                 // Handle successful registration
+                window.location.assign(result.redirect);
             } else {
                 document.getElementById('message').innerHTML = result.message;
                 document.getElementById('message').classList.add('text-red-500');
