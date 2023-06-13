@@ -19,6 +19,7 @@ model User {
     // friends  User[]    @relation("Friends", references: [id])
     // serverId     Int?
     Messages     Message[]
+    authToken    String?
 }
 
 model Profile {
@@ -27,7 +28,7 @@ model Profile {
     bio       String?
     user      User     @relation(fields: [userId], references: [id])
     userId    Int      @unique
-    url       String? 
+    url       String?
 }
 
 model Server {
