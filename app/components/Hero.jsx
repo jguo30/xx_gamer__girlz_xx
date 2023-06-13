@@ -23,7 +23,7 @@ export default function Hero() {
                         </a>
                         <a href="#" 
                         className="rounded-md px-3.5 py-2.5 text-sm bg-gray-900 font-semibold leading-6 text-white z-50 hover:shadow-md dark:hover:shadow-black/30 hover:bg-slate-800 duration-200">
-                            Open Discord in Your Browser <span aria-hidden="true">→</span>
+                            Open Harmony in Your Browser <span aria-hidden="true">→</span>
                         </a>
                     </div>
                 </div>
